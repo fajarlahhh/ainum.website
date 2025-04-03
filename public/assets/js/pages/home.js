@@ -150,61 +150,29 @@ var swiper = new Swiper(".brand-slider",{
   loop:true,
   speed:800,
   autoplay:false,
-  slidesPerView:3,
+  slidesPerView:5,
   spaceBetween:0,
   pagination:false,
   navigation:false,
   breakpoints:{
     0: {
-      slidesPerView: 1,
-      spaceBetween: 80,
-    },
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 80,
-    },
-    768: {
       slidesPerView: 2,
       spaceBetween: 80,
     },
-    992: {
-      slidesPerView: 3 ,
-      spaceBetween: 80,
-    },
-    1200: {
-      slidesPerView: 4,
-      spaceBetween: 80,
-    }
-  }
-})
-
-var swiper = new Swiper(".brand-slider2",{
-  loop:true,
-  speed:800,
-  autoplay:false,
-  slidesPerView:3,
-  spaceBetween:0,
-  pagination:false,
-  navigation:false,
-  breakpoints:{
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 80,
-    },
     480: {
-      slidesPerView: 1,
-      spaceBetween: 80,
-    },
-    768: {
       slidesPerView: 2,
       spaceBetween: 80,
     },
-    992: {
-      slidesPerView: 3 ,
-      spaceBetween: 80,
-    },
-    1200: {
+    768: {
       slidesPerView: 3,
+      spaceBetween: 80,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 80,
+    },
+    1200: {
+      slidesPerView: 5,
       spaceBetween: 80,
     }
   }
