@@ -7,7 +7,7 @@
                 <div class="footer-widget-two">
                     <div class="logo negative-margin">
                         <a href="index.html">
-                            <img src="assets/images/LOGO PERUMDAM 2.png" alt="">
+                            <img src="/assets/images/logo2.png" alt="">
                         </a>
                     </div>
                     <ul class="footer-widget-two-list-icon">
@@ -32,7 +32,7 @@
                     <h5 class="footer-widget-two-title">Recent Posts</h5>
                     <ul class="sidebar-blog">
                         <li>
-                            <a href="blog-details.html" class="image"><img src="assets/images/blog/small/1.png"
+                            <a href="blog-details.html" class="image"><img src="/assets/images/blog/small/1.png"
                                     alt="Blog Post"></a>
                             <div class="content">
                                 <span class="date">25 Feb 2023</span>
@@ -40,7 +40,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="blog-details.html" class="image"><img src="assets/images/blog/small/2.png"
+                            <a href="blog-details.html" class="image"><img src="/assets/images/blog/small/2.png"
                                     alt="Blog Post"></a>
                             <div class="content">
                                 <span class="date">24 Jun 2023</span>
@@ -58,7 +58,7 @@
                     <ul class="instagrm">
                         <li>
                             <a href="#">
-                                <img src="assets/images/blog/gallery/1.png" alt="Insta-Image">
+                                <img src="/assets/images/blog/gallery/1.png" alt="Insta-Image">
                                 <div class="add-action">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -66,7 +66,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/images/blog/gallery/2.png" alt="Insta-Image">
+                                <img src="/assets/images/blog/gallery/2.png" alt="Insta-Image">
                                 <div class="add-action">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -74,7 +74,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/images/blog/gallery/3.png" alt="Insta-Image">
+                                <img src="/assets/images/blog/gallery/3.png" alt="Insta-Image">
                                 <div class="add-action">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -82,7 +82,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/images/blog/gallery/4.png" alt="Insta-Image">
+                                <img src="/assets/images/blog/gallery/4.png" alt="Insta-Image">
                                 <div class="add-action">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -90,7 +90,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/images/blog/gallery/5.png" alt="Insta-Image">
+                                <img src="/assets/images/blog/gallery/5.png" alt="Insta-Image">
                                 <div class="add-action">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -98,7 +98,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/images/blog/gallery/6.png" alt="Insta-Image">
+                                <img src="/assets/images/blog/gallery/6.png" alt="Insta-Image">
                                 <div class="add-action">
                                     <i class="fab fa-instagram"></i>
                                 </div>

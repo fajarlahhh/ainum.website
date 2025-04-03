@@ -99,8 +99,8 @@
     <div class="offcanvas-header">
         <!-- Header Logo Start -->
         <div class="logo">
-            <a href="index.html">
-                <img src="assets/images/LOGO PERUMDAM 2.png" alt="">
+            <a href="/">
+                <img src="/assets/images/logo.png" alt="">
             </a>
         </div>
         <!-- Header Logo End -->

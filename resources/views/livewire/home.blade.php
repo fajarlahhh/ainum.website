@@ -108,7 +108,7 @@
     </div>
     <!-- Slider Section End -->
 
-    <!-- Strategy Section start -->
+    {{-- <!-- Strategy Section start -->
     <div class="section-padding strategy">
         <div class="container">
             <div class="row">
@@ -444,15 +444,7 @@
             </div>
         </div>
     </div>
-    <!-- Tab Content End -->
-
-    <div class="col-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
-        <!-- Heading Start -->
-        <div class="heading-one text-center">
-            <h2 class="heading-one-title">MITRA PEMBAYARAN</h2>
-        </div>
-        <!-- Heading End -->
-    </div>
+    <!-- Tab Content End --> --}}
 
     <!-- Brand Section 1 Start -->
     <div class="brand-three">
