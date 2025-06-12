@@ -5,7 +5,7 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Favicon -->
-<link rel="icon" href="https://ainum-s3.sgp1.cdn.digitaloceanspaces.com/assets/img/favicon.png" type="image/gif">
+<link rel="icon" href="https://ainum.app/assets/img/favicon.png" type="image/gif">
 
 
 <!-- CSS (Font, Plugins & Style CSS files) -->
