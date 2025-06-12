@@ -108,6 +108,121 @@
     </div>
     <!-- Slider Section End -->
 
+
+    <div class="service section-padding position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+                    <!-- Heading Start -->
+                    <div class="heading-one text-center">
+                        <h2 class="heading-one-title">Pelayanan Online</h2>
+                        <p>Kami menyediakan pelayanan online untuk memudahkan pelanggan dalam melakukan transaksi</p>
+                    </div>
+                    <!-- Heading End -->
+                </div>
+            </div>
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n30">
+                <div class="col wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+                    <!-- Single Service Start -->
+                    <div class="service-single">
+                        <div class="service-single-image">
+                            <div class="service-single-image-thumb">
+                                <img src="assets/images/icon/service/icon-1-white.png" alt="ServiceImage">
+                            </div>
+                            <div class="service-single-image-content">
+                                <div class="icon">
+                                    <i class="fas fa-headset fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="title">Pengaduan <br> Pelanggan</h4>
+                            </div>
+                        </div>
+                        <div class="service-single-white">
+                            <a href="/pengaduan" class="service-single-white-content">
+                                <div class="icon gradient-1">
+                                    <i class="fas fa-headset fa-3x text-white"></i>
+                                </div>
+                                <span class="title">Pengaduan <br> Pelanggan</span>
+                                <p>Pelanggan dapat mengirimkan pengaduan layanan melalui aplikasi ini</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single Service End -->
+                </div>
+                <div class="col wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                    <!-- Single Service Start -->
+                    <div class="service-single">
+                        <div class="service-single-image">
+                            <div class="service-single-image-thumb">
+                                <img src="assets/images/icon/service/icon-1-white.png" alt="ServiceImage">
+                            </div>
+                            <div class="service-single-image-content">
+                                <div class="icon">
+                                    <i class="fas fa-file-invoice-dollar fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="title">Informasi <br> Tagihan</h4>
+                            </div>
+                        </div>
+                        <div class="service-single-white">
+                            <a href="/infotagihan" class="service-single-white-content">
+                                <div class="icon gradient-1">
+                                    <i class="fas fa-file-invoice-dollar fa-3x text-white"></i>
+                                </div>
+                                <span class="title">Informasi <br> Tagihan</span>
+                                <p>Pelanggan dapat melihat informasi tagihan melalui aplikasi ini</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single Service End -->
+                </div>
+                <div class="col wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
+                    <!-- Single Service Start -->
+                    <div class="service-single">
+                        <div class="service-single-image">
+                            <div class="service-single-image-thumb">
+                                <img src="assets/images/icon/service/icon-1-white.png" alt="ServiceImage">
+                            </div>
+                            <div class="service-single-image-content">
+                                <div class="icon">
+                                    <i class="fas fa-faucet fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="title">Pasang <br> Baru</h4>
+                            </div>
+                        </div>
+                        <div class="service-single-white">
+                            <a href="/pasangbaru" class="service-single-white-content">
+                                <div class="icon gradient-1">
+                                    <i class="fas fa-faucet fa-3x text-white"></i>
+                                </div>
+                                <span class="title">Pasang <br> Baru</span>
+                                <p>Pelanggan dapat melakukan registrasi pasang baru melalui aplikasi ini</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single Service End -->
+                </div>
+            </div>
+        </div>
+
+        <div class="shape shape-1">
+            <img src="assets/images/shape/dot-2.png" alt="Shape">
+        </div>
+        <div class="shape shape-2">
+            <img src="assets/images/shape/shape-7.png" alt="Shape">
+        </div>
+        <div class="shape shape-3">
+            <img src="assets/images/shape/shape-2.png" alt="Shape">
+        </div>
+        <div class="shape shape-4">
+            <img src="assets/images/shape/shape-9.png" alt="Shape">
+        </div>
+        <div class="shape shape-5">
+            <img src="assets/images/shape/dot-1.png" alt="Shape">
+        </div>
+        <div class="shape shape-6">
+            <img src="assets/images/shape/shape-10.png" alt="Shape">
+        </div>
+    </div>
+
     {{-- <!-- Strategy Section start -->
     <div class="section-padding strategy">
         <div class="container">
