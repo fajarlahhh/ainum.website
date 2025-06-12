@@ -37,9 +37,6 @@
                                                         <a wire:navigate href="/strukturorganisasi">Struktur
                                                             Organisasi</a>
                                                     </li>
-                                                    <li>
-                                                        <a wire:navigate href="/kantorcabang">Kantor Cabang</a>
-                                                    </li>
                                                 </ul>
                                             </li>
                                             <li class="has-children">
@@ -125,9 +122,6 @@
                         </li>
                         <li>
                             <a wire:navigate href="/strukturorganisasi">Struktur Organisasi</a>
-                        </li>
-                        <li>
-                            <a wire:navigate href="/kantorcabang">Kantor Cabang</a>
                         </li>
                     </ul>
                 </li>

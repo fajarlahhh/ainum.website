@@ -562,7 +562,7 @@
     <!-- Tab Content End --> --}}
 
     <!-- Brand Section 1 Start -->
-    <div class="brand-three">
+    {{-- <div class="brand-three">
         <div class="container">
             <div class="row">
                 <div class="col-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
@@ -592,12 +592,12 @@
         <div class="shape shape-3">
             <img src="assets/images/shape/shape-2.png" alt="Shape">
         </div>
-    </div>
+    </div> --}}
     <!-- Brand Section 1 End -->
 
 
     <!-- Blog Post Section Starrt -->
-    <div class="blog-post section-padding">
+    {{-- <div class="blog-post section-padding">
         <div class="container">
             <div class="row">
                 <div class="blog-post-top">
@@ -733,7 +733,7 @@
         <div class="shape shape-6">
             <img src="assets/images/shape/shape-18.png" alt="Shape">
         </div>
-    </div>
+    </div> --}}
     <!-- Blog Post Section End -->
 
 
