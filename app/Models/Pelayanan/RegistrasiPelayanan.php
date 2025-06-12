@@ -15,12 +15,11 @@ use Illuminate\Database\Eloquent\Relations\HasOneThrough;
 class RegistrasiPelayanan extends Model
 {
     //
-    use SoftDeletes, HasSpatial;
+    use SoftDeletes;
     protected $table = 'pelayanan.registrasi_pelayanan';
 
     protected $casts = [
         'detail' => 'json',
-        'koordinat' => Point::class,
     ];
 
     protected $guarded = [];
