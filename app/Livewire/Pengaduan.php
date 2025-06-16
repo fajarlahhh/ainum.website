@@ -61,7 +61,7 @@ class Pengaduan extends Component
         $data->nama = $this->nama;
         $data->alamat = $this->alamat;
         $data->no_hp = $this->no_hp;
-        $data->pelanggan_id = $this->id_pelanggan;
+        $data->pelanggan_id = empty($this->id_pelanggan) ? null : $this->id_pelanggan;
         $data->jenis_pengaduan_id = $this->jenis_pengaduan_id;
         $data->catatan = $this->isi_pengaduan;
         $data->koordinat = new Point($this->latitude, $this->longitude);

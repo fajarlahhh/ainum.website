@@ -31,195 +31,351 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Info Tagihan Section Start -->
-    <div class="contact-us section-margin">
-        <div class="container position-relative">
-            @if ($form != 'tracking')
-                <div class="row">
-                    <!-- Heading Start -->
-                    <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
-                        <span class="heading-one-subtitle">Form Pengaduan</span>
+    @switch($form)
+        @case('result')
+            <div class="why-choose-us section-margin-top mb-5">
+                <div class="container">
+                    <div class="wow fadeInUp mb-30 text-center" data-wow-duration="1.5s" data-wow-delay=".1s">
+                        <span class="heading-one-subtitle"> Tracking Pengaduan</span>
                     </div>
-                    <!-- Heading End -->
-                </div>
-                <form id="contact-form" class="contact-form" wire:submit="submitPengaduan">
                     <div class="row">
-                        <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            <div class="row">
-                                <div class="col-12 mb-3">
-                                    <input placeholder="Nama *" wire:model="nama" class="form-control"
-                                        wire:loading.disable>
-                                    @error('nama')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                        <div class="col-lg-12">
+                            <div class="why-choose-us_inner">
+                                <!-- Why Choose us content Start -->
+                                <div class="why-choose-us_content wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s"
+                                    style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                    <!-- Heading Start -->
+                                    <div class="heading-one">
+                                        <table class="table text-white">
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>:</th>
+                                                <td>{{ $data?->nama }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Alamat</th>
+                                                <th>:</th>
+                                                <td>{{ $data?->alamat }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>No. HP</th>
+                                                <th>:</th>
+                                                <td>{{ $data?->no_hp }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Jenis Pengaduan</th>
+                                                <th>:</th>
+                                                <td>{{ $data?->jenisPengaduan?->nama }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Isi Pengaduan</th>
+                                                <th>:</th>
+                                                <td>{{ $data?->catatan }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!-- Heading End -->
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <input placeholder="Alamat *" wire:model="alamat" class="form-control"
-                                        wire:loading.disable>
-                                    @error('alamat')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <input placeholder="No. Hp *" wire:model="no_hp" class="form-control"
-                                        wire:loading.disable>
-                                    @error('no_hp')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <select wire:model="jenis_pengaduan_id" class="form-control">
-                                        <option value="">-- Pilih Jenis Pengaduan --</option>
-                                        @foreach ($dataJenisPengaduan as $jenis)
-                                            <option value="{{ $jenis['id'] }}">{{ $jenis['nama'] }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('jenis_pengaduan_id')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <input placeholder="ID Pelanggan" wire:model="id_pelanggan" class="form-control"
-                                        wire:loading.disable>
-                                    @error('id_pelanggan')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <textarea name="isi_pengaduan" placeholder="Isi Pengaduan *" wire:model="isi_pengaduan" class="form-control"
-                                        wire:loading.disable></textarea>
-                                    @error('isi_pengaduan')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-12 text-left">
-                                    <button class="btn btn-style-one" type="submit" wire:loading.disable>
-                                        <span>Submit</span> </button>
-                                    <a href="javascript:void(0);" wire:click="tracking" class="btn btn-style-two">
-                                        <span>Tracking</span>
-                                    </a>
-                                </div>
+                                <!-- Why Choose us content End -->
+                                <!-- Why Choose us List Start -->
+                                <ul class="why-choose-us_list">
+                                    @if ($data->validation_at)
+                                        <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                            data-wow-delay=".3s"
+                                            style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                            <span class="check-icon">
+                                                <i class="fas fa-check text-success fa-lg"></i>
+                                            </span>
+                                            <div class="check-content">
+                                                <h4 class="check-content_title">Validasi</h4>
+                                                <p class="check-content_text">Pengaduan anda telah divalidasi oleh admin</p>
+                                            </div>
+                                        </li>
+                                    @else
+                                        <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                            data-wow-delay=".3s"
+                                            style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                            <span class="check-icon">
+                                                <i class="fas fa-times text-danger fa-lg"></i>
+                                            </span>
+                                            <div class="check-content">
+                                                <h4 class="check-content_title">Validasi</h4>
+                                                <p class="check-content_text">Mohon bersabar, pengaduan anda sedang dalam proses
+                                                    validasi</p>
+                                            </div>
+                                        </li>
+                                    @endif
+                                    @if ($data->jenisPengaduan?->spk)
+                                        @if ($data->registrasiPelayanan?->spkPelayanan)
+                                            <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                data-wow-delay=".3s"
+                                                style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                <span class="check-icon">
+                                                    <i class="fas fa-check text-success fa-lg"></i>
+                                                </span>
+                                                <div class="check-content">
+                                                    <h4 class="check-content_title">Penugasan</h4>
+                                                    <p class="check-content_text">Penugasan sudah dilakukan oleh admin</p>
+                                                </div>
+                                            </li>
+                                        @else
+                                            <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                data-wow-delay=".3s"
+                                                style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                <span class="check-icon">
+                                                    <i class="fas fa-times text-danger fa-lg"></i>
+                                                </span>
+                                                <div class="check-content">
+                                                    <h4 class="check-content_title">Penugasan</h4>
+                                                    <p class="check-content_text">
+                                                        @if ($data->validation_at)
+                                                            Mohon bersabar, pengaduan anda sedang dalam proses penugasan
+                                                        @else
+                                                            Proses masih menunggu proses sebelumnya
+                                                        @endif
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endif
+
+                                    @if ($data->jenisPengaduan?->survey)
+                                        @if ($data->registrasiPelayanan?->surveyPelayanan)
+                                            <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                data-wow-delay=".3s"
+                                                style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                <span class="check-icon">
+                                                    <i class="fas fa-check text-success fa-lg"></i>
+                                                </span>
+                                                <div class="check-content">
+                                                    <h4 class="check-content_title">Pengerjaan</h4>
+                                                    <p class="check-content_text">Pengaduan anda sendang dalam proses pengerjaan
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        @else
+                                            <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                data-wow-delay=".3s"
+                                                style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                <span class="check-icon">
+                                                    <i class="fas fa-times text-danger fa-lg"></i>
+                                                </span>
+                                                <div class="check-content">
+                                                    <h4 class="check-content_title">Pengerjaan</h4>
+                                                    <p class="check-content_text">
+                                                        Ditunggu proses sebelumnya dulu ya
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endif
+
+                                    @if ($data->registrasiPelayanan?->beritaAcaraPelayanan)
+                                        <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                            data-wow-delay=".3s"
+                                            style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                            <span class="check-icon">
+                                                <i class="fas fa-check text-success fa-lg"></i>
+                                            </span>
+                                            <div class="check-content">
+                                                <h4 class="check-content_title">Penyelesaian</h4>
+                                                <p class="check-content_text">Pengaduan anda sudah selesai dikerjakan
+                                                </p>
+                                            </div>
+                                        </li>
+                                    @else
+                                        <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                            data-wow-delay=".3s"
+                                            style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                            <span class="check-icon">
+                                                <i class="fas fa-times text-danger fa-lg"></i>
+                                            </span>
+                                            <div class="check-content">
+                                                <h4 class="check-content_title">Penyelesaian</h4>
+                                                <p class="check-content_text">
+                                                    Ditunggu proses sebelumnya dulu ya
+                                                </p>
+                                            </div>
+                                        </li>
+                                    @endif
+                                </ul>
+                                <!-- Why Choose us List End -->
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            <div id="map" wire:ignore class="mb-3"></div>
-                        </div>
-                    </div>
-                </form>
-            @else
-                <div class="row">
-                    @if ($nomor && $form == 'result')
-                        <div class="wow fadeInUp mb-30 text-center" data-wow-duration="1.5s" data-wow-delay=".1s">
-                            <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
-                            <p><strong>No. Pengaduan: {{ $nomor }}</strong></p>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 mb-3">
-                                <table class="table table-bordered">
-                                    <tr>
-                                        <th style="width: 150px;">Validasi</th>
-                                        <th style="width: 10px;">:</th>
-                                        <td>{{ $data?->validation_at }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>SPK</th>
-                                        <th>:</th>
-                                        <td>{{ $data?->registrasiPelayanan?->spkPelayanan?->created_at }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Survey</th>
-                                        <th>:</th>
-                                        <td>{{ $data?->registrasiPelayanan?->surveyPelayanan?->created_at }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>RAB</th>
-                                        <th>:</th>
-                                        <td>{{ $data?->registrasiPelayanan?->rabPelayanan?->created_at }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Berita Acara</th>
-                                        <th>:</th>
-                                        <td>{{ $data?->registrasiPelayanan?->beritaAcaraPelayanan?->created_at }}</td>
-                                    </tr>
-                                </table>
+                            <br>
+                            <div class="text-center mt-3">
+                                <x-alert />
                                 <a href="/pengaduan" class="btn btn-style-two">
                                     <span>Kembali</span>
                                 </a>
                             </div>
                         </div>
-                        <x-alert />
-                    @else
-                        <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
-                            <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                <form id="contact-form" class="contact-form" wire:submit="submitTracking">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <input placeholder="No. Pengaduan" wire:model="nomor" class="form-control"
-                                                wire:loading.disable>
-                                            @error('nomor')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                        <div class="col-12 text-left">
-                                            <button class="btn btn-style-one" type="submit" wire:loading.disable>
-                                                <span>Submit</span> </button>
-                                            <a href="/pengaduan" class="btn btn-style-two">
-                                                <span>Kembali</span>
-                                            </a>
-                                        </div>
+                    </div>
+                </div>
+                <div class="why-choose-us_shape scene"
+                    style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: inherit;">
+                    <img class="shape shape1 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s"
+                        src="assets/images/choose/circle.png" alt="shape"
+                        style="transform: translate3d(0px, 0px, 0px); visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <img class="shape shape2" src="assets/images/choose/shape1.png" alt="shape"
+                        style="transform: translate3d(0px, 0px, 0px);">
+                    <img data-depth="0.20" class="shape shape3" src="assets/images/choose/shape2.png" alt="shape"
+                        style="transform: translate3d(-31.6px, 7.3px, 0px);">
+                </div>
+            </div>
+        @break
+
+        @case('tracking')
+            <div class="contact-us section-margin">
+                <div class="container position-relative">
+                    <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
+                        <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                            <form id="contact-form" class="contact-form" wire:submit="submitTracking">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <input placeholder="No. Pengaduan" wire:model="nomor" class="form-control"
+                                            wire:loading.disable>
+                                        @error('nomor')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
-                                </form>
+                                    <div class="col-12 text-left">
+                                        <button class="btn btn-style-one" type="submit" wire:loading.disable>
+                                            <span>Submit</span> </button>
+                                        <a href="/pengaduan" class="btn btn-style-two">
+                                            <span>Kembali</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @break
+
+        @default
+            <div class="contact-us section-margin">
+                <div class="container position-relative">
+                    <div class="row">
+                        <!-- Heading Start -->
+                        <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
+                            <span class="heading-one-subtitle">Form Pengaduan</span>
+                        </div>
+                        <!-- Heading End -->
+                    </div>
+                    <form id="contact-form" class="contact-form" wire:submit="submitPengaduan">
+                        <div class="row">
+                            <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <input placeholder="Nama *" wire:model="nama" class="form-control"
+                                            wire:loading.disable>
+                                        @error('nama')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input placeholder="Alamat *" wire:model="alamat" class="form-control"
+                                            wire:loading.disable>
+                                        @error('alamat')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input placeholder="No. Hp *" wire:model="no_hp" class="form-control"
+                                            wire:loading.disable>
+                                        @error('no_hp')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <select wire:model="jenis_pengaduan_id" class="form-control">
+                                            <option value="">-- Pilih Jenis Pengaduan --</option>
+                                            @foreach ($dataJenisPengaduan as $jenis)
+                                                <option value="{{ $jenis['id'] }}">{{ $jenis['nama'] }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('jenis_pengaduan_id')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input placeholder="ID Pelanggan" wire:model="id_pelanggan" class="form-control"
+                                            wire:loading.disable>
+                                        @error('id_pelanggan')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <textarea name="isi_pengaduan" placeholder="Isi Pengaduan *" wire:model="isi_pengaduan" class="form-control"
+                                            wire:loading.disable></textarea>
+                                        @error('isi_pengaduan')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-12 text-left">
+                                        <button class="btn btn-style-one" type="submit" wire:loading.disable>
+                                            <span>Submit</span> </button>
+                                        <a href="javascript:void(0);" wire:click="tracking" class="btn btn-style-two">
+                                            <span>Tracking</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <div id="map" wire:ignore class="mb-3"></div>
                             </div>
                         </div>
-                    @endif
+                    </form>
                 </div>
-            @endif
-        </div>
-    </div>
+            </div>
+            @push('scripts')
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+                <script>
+                    var map = L.map('map').setView([{{ $latitude }}, {{ $longitude }}], {{ $zoom }});
+
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+                    var marker = L.marker([{{ $latitude }}, {{ $longitude }}], {
+                        draggable: 'true'
+                    }).addTo(map);
+
+                    marker.on('dragend', function(event) {
+                        var position = marker.getLatLng();
+                        marker.setLatLng(position, {
+                            draggable: 'true'
+                        }).bindPopup(position).update();
+
+                        Livewire.dispatch('koordinat', {
+                            long: position.lng,
+                            lat: position.lat
+                        })
+                    });
+
+                    $(".coordinate").change(function() {
+                        var lat = document.getElementById('latitude').value;
+                        var lng = document.getElementById('longitude').value;
+                        // Validasi nilai input
+                        if (!isNaN(lat) && !isNaN(lng) && lat !== '' && lng !== '') {
+                            var newLatLng = new L.LatLng(lat, lng);
+
+                            // Pindahkan marker ke lokasi baru
+                            marker.setLatLng(newLatLng);
+
+                            // Fokuskan peta ke lokasi baru
+                            map.setView(newLatLng, 13);
+                        } else {
+                            alert('Please enter valid latitude and longitude.');
+                        }
+                    });
+                </script>
+            @endpush
+        @break
+
+    @endswitch
     <!-- Info Tagihan Section End -->
 </div>
-
-@push('scripts')
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script>
-        var map = L.map('map').setView([{{ $latitude }}, {{ $longitude }}], {{ $zoom }});
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-        var marker = L.marker([{{ $latitude }}, {{ $longitude }}], {
-            draggable: 'true'
-        }).addTo(map);
-
-        marker.on('dragend', function(event) {
-            var position = marker.getLatLng();
-            marker.setLatLng(position, {
-                draggable: 'true'
-            }).bindPopup(position).update();
-
-            Livewire.dispatch('koordinat', {
-                long: position.lng,
-                lat: position.lat
-            })
-        });
-
-        $(".coordinate").change(function() {
-            var lat = document.getElementById('latitude').value;
-            var lng = document.getElementById('longitude').value;
-            // Validasi nilai input
-            if (!isNaN(lat) && !isNaN(lng) && lat !== '' && lng !== '') {
-                var newLatLng = new L.LatLng(lat, lng);
-
-                // Pindahkan marker ke lokasi baru
-                marker.setLatLng(newLatLng);
-
-                // Fokuskan peta ke lokasi baru
-                map.setView(newLatLng, 13);
-            } else {
-                alert('Please enter valid latitude and longitude.');
-            }
-        });
-    </script>
-@endpush
