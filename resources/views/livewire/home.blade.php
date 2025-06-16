@@ -383,7 +383,7 @@
                             <img src="assets/images/team/2.png" alt="TeamImage">
                         </div>
                         <div class="single-team-content">
-                            <a href="javascript:;"><span class="name"><small><small>Moh. Akbaruddin, S.STP., M.Tr.I.P</small></small></span></a>
+                            <a href="javascript:;"><span class="name"><small><small><small><small>Moh. Akbaruddin, S.STP., M.Tr.I.P</small></small></small></small></span></a>
                             <span class="desig"><small>Sekretaris Dewan Pengawas</small></span>
                         </div>
                     </div>
