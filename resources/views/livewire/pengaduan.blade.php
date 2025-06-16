@@ -165,8 +165,7 @@
                                         <div class="col-12 text-left">
                                             <button class="btn btn-style-one" type="submit" wire:loading.disable>
                                                 <span>Submit</span> </button>
-                                            <a href="javascript:void(0);" wire:click="pengaduan"
-                                                class="btn btn-style-two">
+                                            <a href="/pengaduan" class="btn btn-style-two">
                                                 <span>Kembali</span>
                                             </a>
                                         </div>
