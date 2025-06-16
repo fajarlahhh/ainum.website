@@ -75,9 +75,10 @@ class Pengaduan extends Component
     public function submitTracking()
     {
         $this->validate([
-            'nomor' => 'required',
+            'nomor' => 'required|exists:App\Models\Pelayanan\RegistrasiPelayananOnline,nomor',
         ]);
 
+        $this->form = "result";
         $this->data = RegistrasiPelayananOnline::where('nomor', $this->nomor)->first();
     }
 

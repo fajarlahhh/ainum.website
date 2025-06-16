@@ -107,7 +107,7 @@
                 </form>
             @else
                 <div class="row">
-                    @if ($nomor)
+                    @if ($nomor && $form == 'result')
                         <div class="wow fadeInUp mb-30 text-center" data-wow-duration="1.5s" data-wow-delay=".1s">
                             <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
                             <p><strong>No. Pengaduan: {{ $nomor }}</strong></p>
