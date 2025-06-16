@@ -15,7 +15,7 @@ class Infotagihan extends Component
     public function submit()
     {
         $this->validate([
-            'noLangganan' => 'required|string|max:15',
+            'noLangganan' => 'required|string|max:15|exists:App\Models\Pelayanan\Pelanggan,id',
         ]);
 
         $this->getPelanggan($this->noLangganan);
@@ -23,15 +23,9 @@ class Infotagihan extends Component
 
     public function getPelanggan($id)
     {
-        if ($id) {
-            $this->pelanggan = Pelanggan::find($id);
+        $this->pelanggan = Pelanggan::find($id);
 
-            if (!$this->pelanggan) {
-                $this->addError('cari', 'Pelanggan ID tidak ditemukan');
-            } else {
-                $this->dataRekeningAir = $this->getRekeningAir([$this->pelanggan->id], 'desc')->where('terbayar', false);
-            }
-        }
+        $this->dataRekeningAir = $this->getRekeningAir([$this->pelanggan->id], 'desc')->where('terbayar', false);
     }
 
     public function resetForm()
