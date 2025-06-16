@@ -11,9 +11,6 @@ class RegistrasiPelayananOnline extends Model
 {
     protected $table = 'pelayanan.registrasi_pelayanan_online';
 
-    protected $casts = [
-        'koordinat' => Point::class,
-    ];
 
     protected $guarded = [];
 

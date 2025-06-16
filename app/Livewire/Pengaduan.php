@@ -67,7 +67,7 @@ class Pengaduan extends Component
         $data->koordinat = new Point($this->latitude, $this->longitude);
         $data->save();
 
-        $this->form = "tracking";
+        $this->form = "result";
         $this->nomor = $nomor;
         session()->flash('success', 'Data pengaduan berhasil disimpan');
     }
