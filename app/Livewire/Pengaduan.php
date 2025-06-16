@@ -6,21 +6,42 @@ use Livewire\Component;
 use App\Models\Pelayanan\JenisPengaduan;
 use App\Models\Pelayanan\RegistrasiPelayananOnline;
 use Livewire\Attributes\Url;
+use MatanYadaev\EloquentSpatial\Objects\Point;
+use App\Traits\MapTrait;
 
 class Pengaduan extends Component
 {
+    use MapTrait;
+
     #[Url]
     public $nomor;
 
     public $nama, $alamat, $no_hp, $id_pelanggan, $dataJenisPengaduan, $isi_pengaduan, $jenis_pengaduan_id, $form = "pengaduan";
 
+    public function cekRegistrasi(?string $pelangganId, ?string $jenisPengaduanId = null): bool
+    {
+        if (!$pelangganId) {
+            return false;
+        }
+
+        if ($jenisPengaduanId == null) {
+            return false;
+        }
+
+        return RegistrasiPelayananOnline::where('pelanggan_id', $pelangganId)
+            ->when($jenisPengaduanId, fn($q) => $q->where('jenis_pengaduan_id', $jenisPengaduanId))
+            ->whereDoesntHave('beritaAcaraPelayanan')
+            ->whereNull('tanggal_batal')
+            ->exists();
+    }
+
     public function submitPengaduan()
     {
         $this->validate([
             'nama' => 'required',
-            'alamat' => 'required|string|min:30',
+            'alamat' => 'required|string|min:20',
             'no_hp' => 'required|digits_between:9,13|numeric|regex:/^08[1-9][0-9]{7,10}$/',
-            'isi_pengaduan' => 'required|min:30',
+            'isi_pengaduan' => 'required|min:20',
             'jenis_pengaduan_id' => 'required',
             'id_pelanggan' => 'nullable|exists:App\Models\Pelayanan\Pelanggan,id',
         ]);
@@ -42,10 +63,12 @@ class Pengaduan extends Component
         $data->pelanggan_id = $this->id_pelanggan;
         $data->jenis_pengaduan_id = $this->jenis_pengaduan_id;
         $data->catatan = $this->isi_pengaduan;
+        $data->koordinat = new Point($this->latitude, $this->longitude);
         $data->save();
 
         $this->form = "tracking";
         $this->nomor = $nomor;
+        session()->flash('success', 'Data pengaduan berhasil disimpan');
     }
 
     public function submitTracking()
@@ -60,11 +83,12 @@ class Pengaduan extends Component
     public function tracking()
     {
         $this->form = "tracking";
+        $this->reset(['nama', 'alamat', 'no_hp', 'id_pelanggan', 'dataJenisPengaduan', 'isi_pengaduan', 'jenis_pengaduan_id']);
     }
 
     public function pengaduan()
     {
-        $this->nomor = null;
+        $this->reset(['nama', 'alamat', 'no_hp', 'id_pelanggan', 'dataJenisPengaduan', 'isi_pengaduan', 'jenis_pengaduan_id']);
         $this->form = "pengaduan";
     }
 

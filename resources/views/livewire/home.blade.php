@@ -109,96 +109,41 @@
     <!-- Slider Section End -->
 
 
-    <div class="service section-padding position-relative">
+    <div class="service p-4 position-relative">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
-                    <!-- Heading Start -->
-                    <div class="heading-one text-center">
-                        <h2 class="heading-one-title">Pelayanan Online</h2>
-                        <p>Kami menyediakan pelayanan online untuk memudahkan pelanggan dalam melakukan transaksi</p>
-                    </div>
-                    <!-- Heading End -->
-                </div>
-            </div>
             <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n30">
-                <div class="col wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
-                    <!-- Single Service Start -->
-                    <div class="service-single">
-                        <div class="service-single-image">
-                            <div class="service-single-image-thumb">
-                                <img src="assets/images/icon/service/icon-1-white.png" alt="ServiceImage">
+                <div class="col mb-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".1s">
+                    <a href="/pengaduan" class="service-four-single">
+                        <div class="service-four-single-top">
+                            <div class="icon">
+                                <i class="fas fa-headset fa-2x text-primary icon-2"></i>
+                                <i class="fas fa-headset fa-2x text-white icon-1"></i>
                             </div>
-                            <div class="service-single-image-content">
-                                <div class="icon">
-                                    <i class="fas fa-headset fa-3x text-primary"></i>
-                                </div>
-                                <h4 class="title">Pengaduan <br> Pelanggan</h4>
-                            </div>
+                            <h4 class="title">Pengaduan Pelanggan</h4>
                         </div>
-                        <div class="service-single-white">
-                            <a href="/pengaduan" class="service-single-white-content">
-                                <div class="icon gradient-1">
-                                    <i class="fas fa-headset fa-3x text-white"></i>
-                                </div>
-                                <span class="title">Pengaduan <br> Pelanggan</span>
-                                <p>Pelanggan dapat mengirimkan pengaduan layanan melalui aplikasi ini</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Service End -->
+                    </a>
                 </div>
-                <div class="col wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                    <!-- Single Service Start -->
-                    <div class="service-single">
-                        <div class="service-single-image">
-                            <div class="service-single-image-thumb">
-                                <img src="assets/images/icon/service/icon-1-white.png" alt="ServiceImage">
+                <div class="col mb-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".3s">
+                    <a href="/infotagihan" class="service-four-single">
+                        <div class="service-four-single-top">
+                            <div class="icon">
+                                <i class="fas fa-file-invoice-dollar fa-2x text-primary icon-2"></i>
+                                <i class="fas fa-file-invoice-dollar fa-2x text-white icon-1"></i>
                             </div>
-                            <div class="service-single-image-content">
-                                <div class="icon">
-                                    <i class="fas fa-file-invoice-dollar fa-3x text-primary"></i>
-                                </div>
-                                <h4 class="title">Informasi <br> Tagihan</h4>
-                            </div>
+                            <h4 class="title">Informasi Tagihan</h4>
                         </div>
-                        <div class="service-single-white">
-                            <a href="/infotagihan" class="service-single-white-content">
-                                <div class="icon gradient-1">
-                                    <i class="fas fa-file-invoice-dollar fa-3x text-white"></i>
-                                </div>
-                                <span class="title">Informasi <br> Tagihan</span>
-                                <p>Pelanggan dapat melihat informasi tagihan melalui aplikasi ini</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Service End -->
+                    </a>
                 </div>
-                <div class="col wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".6s">
-                    <!-- Single Service Start -->
-                    <div class="service-single">
-                        <div class="service-single-image">
-                            <div class="service-single-image-thumb">
-                                <img src="assets/images/icon/service/icon-1-white.png" alt="ServiceImage">
+                <div class="col mb-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".5s">
+                    <a href="/pasangbaru" class="service-four-single">
+                        <div class="service-four-single-top">
+                            <div class="icon">
+                                <i class="fas fa-faucet fa-2x text-primary icon-2"></i>
+                                <i class="fas fa-faucet fa-2x text-white icon-1"></i>
                             </div>
-                            <div class="service-single-image-content">
-                                <div class="icon">
-                                    <i class="fas fa-faucet fa-3x text-primary"></i>
-                                </div>
-                                <h4 class="title">Pasang <br> Baru</h4>
-                            </div>
+                            <h4 class="title">Pasang Baru</h4>
                         </div>
-                        <div class="service-single-white">
-                            <a href="/pasangbaru" class="service-single-white-content">
-                                <div class="icon gradient-1">
-                                    <i class="fas fa-faucet fa-3x text-white"></i>
-                                </div>
-                                <span class="title">Pasang <br> Baru</span>
-                                <p>Pelanggan dapat melakukan registrasi pasang baru melalui aplikasi ini</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Service End -->
+                    </a>
                 </div>
             </div>
         </div>
@@ -223,6 +168,138 @@
         </div>
     </div>
 
+    
+    <!-- Blog Post Section Starrt -->
+    <div class="blog-post section-padding pt-1">
+        <div class="container">
+            <div class="row">
+                <div class="blog-post-top mb-1" >
+                    <!-- Heading Start -->
+                    <div class="heading-one wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+                        <span class="heading-one-subtitle">Publikasi</span>
+                        <h2 class="heading-one-title">Update Terbaru</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n30">
+                <div class="col mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
+                    <!-- Single Blogpost Start -->
+                    <div class="blogpost">
+                        <!-- Blogpost Image Start -->
+                        <div class="blogpost-image">
+                            <a href="blog-details.html"><img src="assets/images/blog/blog1.png" alt="BlogImage"></a>
+                            <div class="blogpost-image-thumb">
+                                <span class="date">22</span>
+                                <span class="text">Apr</span>
+                            </div>
+                        </div>
+                        <!-- Blogpost Image End -->
+
+                        <!-- Blogpost Content Start -->
+                        <div class="blogpost-content">
+                            <ul class="blogpost-meta">
+                                <li>
+                                    <i class="fas fa-folder-open"></i>
+                                    <a href="blog-details.html">Marketing</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user"></i>
+                                    <a href="blog-details.html">John doe</a>
+                                </li>
+                            </ul>
+                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse dolor sit</a></h4>
+                            <a class="blogpost-read-more" href="blog-details.html">Read More</a>
+                        </div>
+                        <!-- Blogpost Content End -->
+                    </div>
+                    <!-- Single Blogpost End -->
+                </div>
+                <div class="col mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                    <!-- Single Blogpost Start -->
+                    <div class="blogpost">
+                        <!-- Blogpost Image Start -->
+                        <div class="blogpost-image">
+                            <a href="blog-details.html"><img src="assets/images/blog/blog2.png" alt="BlogImage"></a>
+                            <div class="blogpost-image-thumb">
+                                <span class="date">20</span>
+                                <span class="text">Apr</span>
+                            </div>
+                        </div>
+                        <!-- Blogpost Image End -->
+
+                        <!-- Blogpost Content Start -->
+                        <div class="blogpost-content">
+                            <ul class="blogpost-meta">
+                                <li>
+                                    <i class="fas fa-folder-open"></i>
+                                    <a href="blog-details.html">Marketing</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user"></i>
+                                    <a href="blog-details.html">John doe</a>
+                                </li>
+                            </ul>
+                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse dolor sit</a></h4>
+                            <a class="blogpost-read-more" href="blog-details.html">Read More</a>
+                        </div>
+                        <!-- Blogpost Content End -->
+                    </div>
+                    <!-- Single Blogpost End -->
+                </div>
+                <div class="col mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
+                    <!-- Single Blogpost Start -->
+                    <div class="blogpost">
+                        <!-- Blogpost Image Start -->
+                        <div class="blogpost-image">
+                            <a href="blog-details.html"><img src="assets/images/blog/blog3.png" alt="BlogImage"></a>
+                            <div class="blogpost-image-thumb">
+                                <span class="date">24</span>
+                                <span class="text">Apr</span>
+                            </div>
+                        </div>
+                        <!-- Blogpost Image End -->
+
+                        <!-- Blogpost Content Start -->
+                        <div class="blogpost-content">
+                            <ul class="blogpost-meta">
+                                <li>
+                                    <i class="fas fa-folder-open"></i>
+                                    <a href="blog-details.html">Marketing</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user"></i>
+                                    <a href="blog-details.html">John doe</a>
+                                </li>
+                            </ul>
+                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse dolor sit</a></h4>
+                            <a class="blogpost-read-more" href="blog-details.html">Read More</a>
+                        </div>
+                        <!-- Blogpost Content End -->
+                    </div>
+                    <!-- Single Blogpost End -->
+                </div>
+            </div>
+        </div>
+        <div class="shape shape-1">
+            <img src="assets/images/shape/shape-17.png" alt="Shape">
+        </div>
+        <div class="shape shape-2">
+            <img src="assets/images/shape/shape-2.png" alt="Shape">
+        </div>
+        <div class="shape shape-3">
+            <img src="assets/images/shape/shape-18.png" alt="Shape">
+        </div>
+        <div class="shape shape-4">
+            <img src="assets/images/shape/shape-2.png" alt="Shape">
+        </div>
+        <div class="shape shape-5">
+            <img src="assets/images/shape/shape-19.png" alt="Shape">
+        </div>
+        <div class="shape shape-6">
+            <img src="assets/images/shape/shape-18.png" alt="Shape">
+        </div>
+    </div>
+    <!-- Blog Post Section End -->
     {{-- <!-- Strategy Section start -->
     <div class="section-padding strategy">
         <div class="container">
@@ -736,6 +813,176 @@
     </div> --}}
     <!-- Blog Post Section End -->
 
+    <div class="testimonial-one mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="testimonial-one-inner">
+                        <div class="testimonial-one-image">
+                            <img src="assets/images/testimonial/testimonial-large.png" alt="TestimonialImage">
+                        </div>
+                        <div class="testimonial-one-content wow fadeInUp" data-wow-duration="1.5s"
+                            data-wow-delay=".1s">
+                            <!-- Heading Start -->
+                            <div class="heading-one">
+                                <span class="heading-one-subtitle">H. Abdul Hakim</span>
+                                <h2 class="heading-one-title">Direktur</h2>
+                            </div>
+                            <!-- Heading End -->
+                            <div class="testimonialone">
+                                <!--== Start Testimonial Item ==-->
+                                <div class="testimonialone-single">
+                                    <p class="testimonialone-text"><i>"Dengan semangat pelayanan yang tinggi, kami
+                                            berkomitmen memberikan air bersih berkualitas untuk kepuasan pelanggan."</i>
+                                    </p>
+                                </div>
+                                <!--== End Testimonial Item ==-->
+                            </div>
+                        </div>
+                        <div class="testimonial-one-thumb gradient-1 wow flipInY" data-wow-duration="1.5s"
+                            data-wow-delay=".1s">
+                            <img src="assets/images/testimonial/testimonial-quote.png" alt="QuoteImage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape shape-1">
+            <img src="assets/images/shape/shape-14.png" alt="Shape">
+        </div>
+        <div class="shape shape-2">
+            <img src="assets/images/shape/shape-2.png" alt="Shape">
+        </div>
+    </div>
 
 
+    <div class="team-three mb-5">
+        <div class="shape scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25"
+            data-scalar-y="15">
+            <div class="shape1" data-depth="0.1">
+                <img src="assets/images/team/team-three/1.png" alt="shape">
+            </div>
+            <div class="shape2 wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".1s">
+                <img src="assets/images/team/team-three/2.png" alt="shape">
+            </div>
+            <div class="shape3 wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".1s">
+                <img src="assets/images/team/team-three/3.png" alt="shape">
+            </div>
+            <div class="shape4 wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".1s">
+                <img src="assets/images/team/team-three/4.png" alt="shape">
+            </div>
+            <div class="shape5" data-depth="0.06">
+                <img src="assets/images/team/team-three/5.png" alt="shape">
+            </div>
+            <div class="shape6" data-depth="0.14">
+                <img src="assets/images/team/team-three/6.png" alt="shape">
+            </div>
+            <div class="shape7 wow zoomIn" data-wow-duration="1.5s" data-wow-delay=".1s">
+                <img src="assets/images/team/team-three/7.png" alt="shape">
+            </div>
+            <!-- <div class="shape3" data-depth="0.14">
+                <img src="assets/images/progress/shape1.png" alt="shape">
+            </div> -->
+        </div>
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-xs-2 row-cols-1 team-three-wrapper">
+                <div class="col team-three-single wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".1s">
+                    <div class="single-team">
+                        <div class="single-team-image">
+                            <img src="assets/images/team/1.png" alt="TeamImage">
+                        </div>
+                        <div class="single-team-content">
+                            <a href="contact.html"><span class="name">Minhaz Mohsin</span></a>
+                            <span class="desig">Founder & CEO</span>
+                            <ul class="single-team-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" class="facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col team-three-single wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".3s">
+                    <div class="single-team">
+                        <div class="single-team-image">
+                            <img src="assets/images/team/2.png" alt="TeamImage">
+                        </div>
+                        <div class="single-team-content">
+                            <a href="contact.html"><span class="name">John Jessy</span></a>
+                            <span class="desig">Head of Ideas</span>
+                            <ul class="single-team-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" class="facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col team-three-single wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".5s">
+                    <div class="single-team">
+                        <div class="single-team-image">
+                            <img src="assets/images/team/3.png" alt="TeamImage">
+                        </div>
+                        <div class="single-team-content">
+                            <a href="contact.html"><span class="name">Jenny Alex</span></a>
+                            <span class="desig">Team Leader</span>
+                            <ul class="single-team-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" class="facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col team-three-single wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".7s">
+                    <div class="single-team">
+                        <div class="single-team-image">
+                            <img src="assets/images/team/4.png" alt="TeamImage">
+                        </div>
+                        <div class="single-team-content">
+                            <a href="contact.html"><span class="name">Hizz Lui</span></a>
+                            <span class="desig">Designer</span>
+                            <ul class="single-team-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" class="facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

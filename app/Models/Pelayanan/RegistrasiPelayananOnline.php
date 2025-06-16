@@ -5,13 +5,14 @@ namespace App\Models\Pelayanan;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use MatanYadaev\EloquentSpatial\Objects\Point;
 
 class RegistrasiPelayananOnline extends Model
 {
     protected $table = 'pelayanan.registrasi_pelayanan_online';
 
     protected $casts = [
-        'detail' => 'json',
+        'koordinat' => Point::class,
     ];
 
     protected $guarded = [];

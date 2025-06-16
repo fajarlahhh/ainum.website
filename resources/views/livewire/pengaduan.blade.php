@@ -1,4 +1,14 @@
 <div>
+    @push('css')
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+        <style>
+            #map {
+                height: 500px;
+            }
+        </style>
+    @endpush
     <!-- Breadcrumb Section Start -->
     <div class="section-padding breadcrumb">
         <div class="container">
@@ -23,7 +33,7 @@
     <!-- Info Tagihan Section Start -->
     <div class="contact-us section-margin">
         <div class="container position-relative">
-            @if ($form == 'pengaduan')
+            @if ($form != 'tracking')
                 <div class="row">
                     <!-- Heading Start -->
                     <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
@@ -31,9 +41,9 @@
                     </div>
                     <!-- Heading End -->
                 </div>
-                <div class="row">
-                    <div class="col-md-12 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                        <form id="contact-form" class="contact-form" wire:submit="submitPengaduan">
+                <form id="contact-form" class="contact-form" wire:submit="submitPengaduan">
+                    <div class="row">
+                        <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <input placeholder="Nama *" wire:model="nama" class="form-control"
@@ -89,26 +99,55 @@
                                     </a>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                            <div id="map" wire:ignore class="mb-3"></div>
+                        </div>
                     </div>
-                </div>
+                </form>
             @else
                 <div class="row">
-                    <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
-                        <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                            @if ($nomor)
-                                <div class="row">
-                                    <div class="col-12 mb-3 text-center">
-                                        <strong>No. Pengaduan: {{ $nomor }}</strong>
-                                    </div>
-                                </div>
-                                <a href="javascript:void(0);" wire:click="pengaduan" class="btn btn-style-two">
+                    @if ($nomor)
+                        <div class="wow fadeInUp mb-30 text-center" data-wow-duration="1.5s" data-wow-delay=".1s">
+                            <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
+                            <p><strong>No. Pengaduan: {{ $nomor }}</strong></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th style="width: 150px;">Validasi</th>
+                                        <th style="width: 10px;">:</th>
+                                        <td>Survey</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Survey</th>
+                                        <th>:</th>
+                                        <td>Survey</td>
+                                    </tr>
+                                    <tr>
+                                        <th>RAB</th>
+                                        <th>:</th>
+                                        <td>Survey</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Berita Acara</th>
+                                        <th>:</th>
+                                        <td>Survey</td>
+                                    </tr>
+                                </table>
+                                <a href="/pengaduan" class="btn btn-style-two">
                                     <span>Kembali</span>
                                 </a>
-                            @else
+                            </div>
+                        </div>
+                        <x-alert />
+                    @else
+                        <div class="text-center wow fadeInUp mb-30" data-wow-duration="1.5s" data-wow-delay=".1s">
+                            <span class="heading-one-subtitle">Form Tracking Pengaduan</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <form id="contact-form" class="contact-form" wire:submit="submitTracking">
                                     <div class="row">
                                         <div class="col-12 mb-3">
@@ -128,12 +167,55 @@
                                         </div>
                                     </div>
                                 </form>
-                            @endif
+                            </div>
                         </div>
-                    </div>
+                    @endif
                 </div>
             @endif
         </div>
     </div>
     <!-- Info Tagihan Section End -->
 </div>
+
+@push('scripts')
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([{{ $latitude }}, {{ $longitude }}], {{ $zoom }});
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        var marker = L.marker([{{ $latitude }}, {{ $longitude }}], {
+            draggable: 'true'
+        }).addTo(map);
+
+        marker.on('dragend', function(event) {
+            var position = marker.getLatLng();
+            marker.setLatLng(position, {
+                draggable: 'true'
+            }).bindPopup(position).update();
+
+            Livewire.dispatch('koordinat', {
+                long: position.lng,
+                lat: position.lat
+            })
+        });
+
+        $(".coordinate").change(function() {
+            var lat = document.getElementById('latitude').value;
+            var lng = document.getElementById('longitude').value;
+            // Validasi nilai input
+            if (!isNaN(lat) && !isNaN(lng) && lat !== '' && lng !== '') {
+                var newLatLng = new L.LatLng(lat, lng);
+
+                // Pindahkan marker ke lokasi baru
+                marker.setLatLng(newLatLng);
+
+                // Fokuskan peta ke lokasi baru
+                map.setView(newLatLng, 13);
+            } else {
+                alert('Please enter valid latitude and longitude.');
+            }
+        });
+    </script>
+@endpush
