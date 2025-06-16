@@ -118,22 +118,27 @@
                                     <tr>
                                         <th style="width: 150px;">Validasi</th>
                                         <th style="width: 10px;">:</th>
-                                        <td>Survey</td>
+                                        <td>{{ $data?->validation_at }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SPK</th>
+                                        <th>:</th>
+                                        <td>{{ $data?->registrasiPelayanan?->spkPelayanan?->created_at }}</td>
                                     </tr>
                                     <tr>
                                         <th>Survey</th>
                                         <th>:</th>
-                                        <td>Survey</td>
+                                        <td>{{ $data?->registrasiPelayanan?->surveyPelayanan?->created_at }}</td>
                                     </tr>
                                     <tr>
                                         <th>RAB</th>
                                         <th>:</th>
-                                        <td>Survey</td>
+                                        <td>{{ $data?->registrasiPelayanan?->rabPelayanan?->created_at }}</td>
                                     </tr>
                                     <tr>
                                         <th>Berita Acara</th>
                                         <th>:</th>
-                                        <td>Survey</td>
+                                        <td>{{ $data?->registrasiPelayanan?->beritaAcaraPelayanan?->created_at }}</td>
                                     </tr>
                                 </table>
                                 <a href="/pengaduan" class="btn btn-style-two">

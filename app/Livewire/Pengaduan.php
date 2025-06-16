@@ -16,6 +16,7 @@ class Pengaduan extends Component
     #[Url]
     public $nomor;
 
+    public $data;
     public $nama, $alamat, $no_hp, $id_pelanggan, $dataJenisPengaduan, $isi_pengaduan, $jenis_pengaduan_id, $form = "pengaduan";
 
     public function cekRegistrasi(?string $pelangganId, ?string $jenisPengaduanId = null): bool
@@ -77,7 +78,7 @@ class Pengaduan extends Component
             'nomor' => 'required',
         ]);
 
-        $data = RegistrasiPelayananOnline::where('nomor', $this->nomor)->first();
+        $this->data = RegistrasiPelayananOnline::where('nomor', $this->nomor)->first();
     }
 
     public function tracking()
@@ -96,6 +97,7 @@ class Pengaduan extends Component
     {
         if ($this->nomor) {
             $this->form = "tracking";
+            $this->submitTracking();
         } else {
             $this->form = "pengaduan";
         }
