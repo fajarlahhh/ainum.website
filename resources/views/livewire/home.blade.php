@@ -305,7 +305,7 @@
                 <div class="col-12">
                     <div class="testimonial-one-inner">
                         <div class="testimonial-one-image">
-                            <img src="assets/images/testimonial/testimonial-large.png" alt="TestimonialImage">
+                            <img src="assets/images/direktur.jpeg" alt="TestimonialImage">
                         </div>
                         <div class="testimonial-one-content wow fadeInUp" data-wow-duration="1.5s"
                             data-wow-delay=".1s">
@@ -383,7 +383,7 @@
                             <img src="assets/images/team/2.png" alt="TeamImage">
                         </div>
                         <div class="single-team-content">
-                            <a href="javascript:;"><span class="name"><small><small>Edy Syah Riansyah, S.E.</small></small></span></a>
+                            <a href="javascript:;"><span class="name"><small><small>Moh. Akbaruddin, S.STP., M.Tr.I.P</small></small></span></a>
                             <span class="desig"><small>Sekretaris Dewan Pengawas</small></span>
                         </div>
                     </div>
