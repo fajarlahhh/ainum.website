@@ -112,21 +112,38 @@
                                             </div>
                                         </li>
                                     @endif
+
                                     @if ($data->jenisPengaduan?->spk)
-                                        @if ($data->registrasiPelayanan->spkPelayanan)
-                                            <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
-                                                data-wow-delay=".3s"
-                                                style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                                                <span class="check-icon">
-                                                    <i class="fas fa-check text-success fa-lg"></i>
-                                                </span>
-                                                <div class="check-content">
-                                                    <h4 class="check-content_title">Penugasan</h4>
-                                                    <p class="check-content_text">Penugasan sudah dilakukan oleh admin<br>
-                                                        <small><small>{{ $data->registrasiPelayanan->spkPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
-                                                    </p>
-                                                </div>
-                                            </li>
+                                        @if ($data->registrasiPelayanan)
+                                            @if ($data->registrasiPelayanan->spkPelayanan)
+                                                <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                    data-wow-delay=".3s"
+                                                    style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                    <span class="check-icon">
+                                                        <i class="fas fa-check text-success fa-lg"></i>
+                                                    </span>
+                                                    <div class="check-content">
+                                                        <h4 class="check-content_title">Penugasan</h4>
+                                                        <p class="check-content_text">Penugasan sudah dilakukan oleh admin<br>
+                                                            <small><small>{{ $data->registrasiPelayanan->spkPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            @else
+                                                <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                    data-wow-delay=".3s"
+                                                    style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                    <span class="check-icon">
+                                                        <i class="fas fa-times text-danger fa-lg"></i>
+                                                    </span>
+                                                    <div class="check-content">
+                                                        <h4 class="check-content_title">Penugasan</h4>
+                                                        <p class="check-content_text">
+                                                            Mohon bersabar, pengaduan anda sedang dalam proses penugasan
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            @endif
                                         @else
                                             <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
                                                 data-wow-delay=".3s"
@@ -137,11 +154,7 @@
                                                 <div class="check-content">
                                                     <h4 class="check-content_title">Penugasan</h4>
                                                     <p class="check-content_text">
-                                                        @if ($data->validation_at)
-                                                            Mohon bersabar, pengaduan anda sedang dalam proses penugasan
-                                                        @else
-                                                            Proses masih menunggu proses sebelumnya
-                                                        @endif
+                                                        Ditunggu proses validasi dulu ya
                                                     </p>
                                                 </div>
                                             </li>
@@ -149,7 +162,56 @@
                                     @endif
 
                                     @if ($data->jenisPengaduan?->survey)
-                                        @if ($data->registrasiPelayanan?->surveyPelayanan)
+                                        @if ($data->registrasiPelayanan)
+                                            @if ($data->registrasiPelayanan?->surveyPelayanan)
+                                                <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                    data-wow-delay=".3s"
+                                                    style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                    <span class="check-icon">
+                                                        <i class="fas fa-check text-success fa-lg"></i>
+                                                    </span>
+                                                    <div class="check-content">
+                                                        <h4 class="check-content_title">Pengerjaan</h4>
+                                                        <p class="check-content_text">Pengaduan anda sendang dalam proses
+                                                            pengerjaan<br>
+                                                            <small><small>{{ $data->registrasiPelayanan->surveyPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            @else
+                                                <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                    data-wow-delay=".3s"
+                                                    style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                    <span class="check-icon">
+                                                        <i class="fas fa-times text-danger fa-lg"></i>
+                                                    </span>
+                                                    <div class="check-content">
+                                                        <h4 class="check-content_title">Pengerjaan</h4>
+                                                        <p class="check-content_text">
+                                                            Ditunggu proses penugasan dulu ya
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            @endif
+                                        @else
+                                            <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
+                                                data-wow-delay=".3s"
+                                                style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                                <span class="check-icon">
+                                                    <i class="fas fa-times text-danger fa-lg"></i>
+                                                </span>
+                                                <div class="check-content">
+                                                    <h4 class="check-content_title">Pengerjaan</h4>
+                                                    <p class="check-content_text">
+                                                        Ditunggu proses penugasan dulu ya
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    @endif
+
+                                    @if ($data->registrasiPelayanan)
+                                        @if ($data->registrasiPelayanan?->beritaAcaraPelayanan)
                                             <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
                                                 data-wow-delay=".3s"
                                                 style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
@@ -157,10 +219,9 @@
                                                     <i class="fas fa-check text-success fa-lg"></i>
                                                 </span>
                                                 <div class="check-content">
-                                                    <h4 class="check-content_title">Pengerjaan</h4>
-                                                    <p class="check-content_text">Pengaduan anda sendang dalam proses
-                                                        pengerjaan<br>
-                                                        <small><small>{{ $data->registrasiPelayanan->surveyPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
+                                                    <h4 class="check-content_title">Penyelesaian</h4>
+                                                    <p class="check-content_text">Pengaduan anda sudah selesai dikerjakan<br>
+                                                        <small><small>{{ $data->registrasiPelayanan->beritaAcaraPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
                                                     </p>
                                                 </div>
                                             </li>
@@ -172,29 +233,13 @@
                                                     <i class="fas fa-times text-danger fa-lg"></i>
                                                 </span>
                                                 <div class="check-content">
-                                                    <h4 class="check-content_title">Pengerjaan</h4>
+                                                    <h4 class="check-content_title">Penyelesaian</h4>
                                                     <p class="check-content_text">
-                                                        Ditunggu proses sebelumnya dulu ya
+                                                        Ditunggu proses pengerjaan dulu ya
                                                     </p>
                                                 </div>
                                             </li>
                                         @endif
-                                    @endif
-
-                                    @if ($data->registrasiPelayanan?->beritaAcaraPelayanan)
-                                        <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
-                                            data-wow-delay=".3s"
-                                            style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                                            <span class="check-icon">
-                                                <i class="fas fa-check text-success fa-lg"></i>
-                                            </span>
-                                            <div class="check-content">
-                                                <h4 class="check-content_title">Penyelesaian</h4>
-                                                <p class="check-content_text">Pengaduan anda sudah selesai dikerjakan<br>
-                                                    <small><small>{{ $data->registrasiPelayanan->beritaAcaraPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
-                                                </p>
-                                            </div>
-                                        </li>
                                     @else
                                         <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
                                             data-wow-delay=".3s"
@@ -203,9 +248,9 @@
                                                 <i class="fas fa-times text-danger fa-lg"></i>
                                             </span>
                                             <div class="check-content">
-                                                <h4 class="check-content_title">Penyelesaian</h4>
+                                                <h4 class="check-content_title">Pengerjaan</h4>
                                                 <p class="check-content_text">
-                                                    Ditunggu proses sebelumnya dulu ya
+                                                    Ditunggu proses pengerjaan dulu ya
                                                 </p>
                                             </div>
                                         </li>
