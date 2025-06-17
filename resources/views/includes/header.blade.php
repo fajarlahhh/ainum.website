@@ -128,10 +128,10 @@
                 <li class="menu-item-has-children">
                     <a href="">Pelayanan</a>
                     <ul class="dropdown">
-                        <li><a href="/pelayanan/infotagihan">Info Tagihan</a></li>
-                        <li><a href="/pelayanan/laporangka">Lapor Angka</a></li>
-                        <li><a href="/pelayanan/pasangbaru">Pasang Baru</a></li>
-                        <li><a href="/pelayanan/pengaduan">Pengaduan</a></li>
+                        <li><a href="/infotagihan">Info Tagihan</a></li>
+                        <li><a href="/laporangka">Lapor Angka</a></li>
+                        <li><a href="/pasangbaru">Pasang Baru</a></li>
+                        <li><a href="/pengaduan">Pengaduan</a></li>
                     </ul>
                 </li>
                 {{-- <li class="menu-item-has-children">
