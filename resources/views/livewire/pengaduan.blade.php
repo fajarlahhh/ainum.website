@@ -45,7 +45,7 @@
                                 <div class="why-choose-us_content wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s"
                                     style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <!-- Heading Start -->
-                                    <div class="heading-one">
+                                    <div class="heading-one overflow-auto">
                                         <table class="table text-white">
                                             <tr>
                                                 <th>Nomor</th>
@@ -325,7 +325,7 @@
                     </div>
                     <form id="contact-form" class="contact-form" wire:submit="submitPengaduan">
                         <div class="row">
-                            <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                            <div class="col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div class="row">
                                     <div class="col-12 mb-3">
                                         <input placeholder="Nama *" wire:model="nama" class="form-control"
@@ -373,17 +373,17 @@
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
-                                    <div class="col-12 text-left">
-                                        <button class="btn btn-style-one" type="submit" wire:loading.disable>
-                                            <span>Submit</span> </button>
-                                        <a href="javascript:void(0);" wire:click="tracking" class="btn btn-style-two">
-                                            <span>Tracking</span>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                            <div class="col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div id="map" wire:ignore class="mb-3"></div>
+                            </div>
+                            <div class="col-md-12 mb-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                <button class="btn btn-style-one" type="submit" wire:loading.disable>
+                                    <span>Submit</span> </button>
+                                <a href="javascript:void(0);" wire:click="tracking" class="btn btn-style-two">
+                                    <span>Tracking</span>
+                                </a>
                             </div>
                         </div>
                     </form>
