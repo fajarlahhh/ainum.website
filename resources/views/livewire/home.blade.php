@@ -166,12 +166,12 @@
             <img src="assets/images/shape/shape-10.png" alt="Shape">
         </div>
     </div>
-    
+
     <!-- Blog Post Section Starrt -->
     <div class="blog-post section-padding pt-1">
         <div class="container">
             <div class="row">
-                <div class="blog-post-top mb-1" >
+                <div class="blog-post-top mb-1">
                     <!-- Heading Start -->
                     <div class="heading-one wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s">
                         <span class="heading-one-subtitle">Publikasi</span>
@@ -205,7 +205,8 @@
                                     <a href="blog-details.html">John doe</a>
                                 </li>
                             </ul>
-                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse dolor sit</a></h4>
+                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse
+                                    dolor sit</a></h4>
                             <a class="blogpost-read-more" href="blog-details.html">Read More</a>
                         </div>
                         <!-- Blogpost Content End -->
@@ -237,7 +238,8 @@
                                     <a href="blog-details.html">John doe</a>
                                 </li>
                             </ul>
-                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse dolor sit</a></h4>
+                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse
+                                    dolor sit</a></h4>
                             <a class="blogpost-read-more" href="blog-details.html">Read More</a>
                         </div>
                         <!-- Blogpost Content End -->
@@ -269,7 +271,8 @@
                                     <a href="blog-details.html">John doe</a>
                                 </li>
                             </ul>
-                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse dolor sit</a></h4>
+                            <h4 class="blogpost-title"><a href="blog-details.html">Lorem ipsum dolor sit amet conse
+                                    dolor sit</a></h4>
                             <a class="blogpost-read-more" href="blog-details.html">Read More</a>
                         </div>
                         <!-- Blogpost Content End -->
@@ -318,8 +321,12 @@
                             <div class="testimonialone">
                                 <!--== Start Testimonial Item ==-->
                                 <div class="testimonialone-single">
-                                    <p class="testimonialone-text"><i>"Dengan semangat pelayanan yang tinggi, kami
-                                            berkomitmen memberikan air bersih berkualitas untuk kepuasan pelanggan."</i>
+                                    <p class="testimonialone-text"><i>"DENGAN MENGUSUNG VISI
+                                            PERUMDAM BATULANTEH SEHAT INOVATIF PRIMA,
+                                            SEHAT PERUSAHAANNYA DALAM SEMUA BAGIAN UNTUK MENCAPAI SEBUAH PERUSAHAAN YANG
+                                            EFEKTIF & EFISIEN.
+                                            MAMPU BERINOVASI UNTUK KEMAJUAN PERUSAHAAN
+                                            MEMBERIKAN PELAYANAN YANG PRIMA UNTUK MENCAPAI KEPUASAN PELANGGAN"</i>
                                     </p>
                                 </div>
                                 <!--== End Testimonial Item ==-->
@@ -372,7 +379,8 @@
                             <img src="assets/images/team/1.png" alt="TeamImage">
                         </div>
                         <div class="single-team-content">
-                            <a href="javascript:;"><span class="name"><small><small>Edy Syah Riansyah, S.E.</small></small></span></a>
+                            <a href="javascript:;"><span class="name"><small><small>Edy Syah Riansyah,
+                                            S.E.</small></small></span></a>
                             <span class="desig"><small>Anggota Dewan Pengawas</small></span>
                         </div>
                     </div>
@@ -383,7 +391,8 @@
                             <img src="assets/images/team/2.png" alt="TeamImage">
                         </div>
                         <div class="single-team-content">
-                            <a href="javascript:;"><span class="name"><small><small><small><small>Moh. Akbaruddin, S.STP., M.Tr.I.P</small></small></small></small></span></a>
+                            <a href="javascript:;"><span class="name"><small><small><small><small>Moh. Akbaruddin,
+                                                    S.STP., M.Tr.I.P</small></small></small></small></span></a>
                             <span class="desig"><small>Sekretaris Dewan Pengawas</small></span>
                         </div>
                     </div>
