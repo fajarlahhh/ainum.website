@@ -37,49 +37,39 @@
                 <div class="container">
                     <div class="wow fadeInUp mb-30 text-center" data-wow-duration="1.5s" data-wow-delay=".1s">
                         <span class="heading-one-subtitle"> Tracking Pengaduan</span>
+                        <p><small>{{ $data?->nomor }}</small></p>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="why-choose-us_inner p-5">
                                 <!-- Why Choose us content Start -->
-                                <div class="why-choose-us_content wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s"
+                                <div class="why-choose-us_content wow fadeInUp" data-wow-duration="1.5s"
+                                    data-wow-delay=".1s"
                                     style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <!-- Heading Start -->
-                                    <div class="heading-one overflow-auto">
-                                        <table class="table text-white">
-                                            <tr>
-                                                <th>Nomor</th>
-                                                <th>:</th>
-                                                <td>{{ $data?->nomor }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Nama</th>
-                                                <th>:</th>
-                                                <td>{{ $data?->nama }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Alamat</th>
-                                                <th>:</th>
-                                                <td>{{ $data?->alamat }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>No. HP</th>
-                                                <th>:</th>
-                                                <td>{{ $data?->no_hp }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-nowrap">Jenis Pengaduan</th>
-                                                <th>:</th>
-                                                <td>{{ $data?->jenisPengaduan?->nama }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Isi Pengaduan</th>
-                                                <th>:</th>
-                                                <td>{{ $data?->catatan }}</td>
-                                            </tr>
-                                        </table>
+                                    <div class="heading-one">
+                                        <!-- Heading End -->
+                                        <div class="check-content mb-3">
+                                            <h4 class="check-content_title text-white">Nama</h4>
+                                            <p class="check-content_text text-white">{{ $data?->nama }}</p>
+                                        </div>
+                                        <div class="check-content mb-3">
+                                            <h4 class="check-content_title text-white">Alamat</h4>
+                                            <p class="check-content_text text-white">{{ $data?->alamat }}</p>
+                                        </div>
+                                        <div class="check-content mb-3">
+                                            <h4 class="check-content_title text-white">No. HP</h4>
+                                            <p class="check-content_text text-white">{{ $data?->no_hp }}</p>
+                                        </div>
+                                        <div class="check-content mb-3">
+                                            <h4 class="check-content_title text-white">Jenis Pengaduan</h4>
+                                            <p class="check-content_text text-white">{{ $data?->jenisPengaduan?->nama }}</p>
+                                        </div>
+                                        <div class="check-content mb-3">
+                                            <h4 class="check-content_title text-white">Isi Pengaduan</h4>
+                                            <p class="check-content_text text-white">{{ $data?->catatan }}</p>
+                                        </div>
                                     </div>
-                                    <!-- Heading End -->
                                 </div>
                                 <!-- Why Choose us content End -->
                                 <!-- Why Choose us List Start -->
