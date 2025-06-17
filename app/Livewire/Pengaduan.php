@@ -56,16 +56,16 @@ class Pengaduan extends Component
             $nomor = "00001/PENGADUAN/PBL/ONLINE/" . date('m/Y');
         }
 
-        $data = new RegistrasiPelayananOnline();
-        $data->nomor = $nomor;
-        $data->nama = $this->nama;
-        $data->alamat = $this->alamat;
-        $data->no_hp = $this->no_hp;
-        $data->pelanggan_id = empty($this->id_pelanggan) ? null : $this->id_pelanggan;
-        $data->jenis_pengaduan_id = $this->jenis_pengaduan_id;
-        $data->catatan = $this->isi_pengaduan;
-        $data->koordinat = new Point($this->latitude, $this->longitude);
-        $data->save();
+        $this->data = new RegistrasiPelayananOnline();
+        $this->data->nomor = $nomor;
+        $this->data->nama = $this->nama;
+        $this->data->alamat = $this->alamat;
+        $this->data->no_hp = $this->no_hp;
+        $this->data->pelanggan_id = empty($this->id_pelanggan) ? null : $this->id_pelanggan;
+        $this->data->jenis_pengaduan_id = $this->jenis_pengaduan_id;
+        $this->data->catatan = $this->isi_pengaduan;
+        $this->data->koordinat = new Point($this->latitude, $this->longitude);
+        $this->data->save();
 
         $this->form = "result";
         $this->nomor = $nomor;
