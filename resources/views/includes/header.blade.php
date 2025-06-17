@@ -51,14 +51,14 @@
                                                     <li><a wire:navigate href="/pengaduan">Pengaduan</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="has-children">
+                                            {{-- <li class="has-children">
                                                 <a href="#">Publikasi</a>
                                                 <ul class="sub-menu">
                                                     <li><a wire:navigate href="/berita">Berita</a></li>
                                                     <li><a wire:navigate href="/pengumuman">Pengumuman</a>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                             <li><a wire:navigate href="/kontak">Kontak Kami </a></li>
                                         </ul>
                                     </nav>
@@ -134,14 +134,14 @@
                         <li><a href="/pelayanan/pengaduan">Pengaduan</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children">
+                {{-- <li class="menu-item-has-children">
                     <a href="#">Publikasi</a>
                     <ul class="dropdown">
                         <li><a wire:navigate href="/berita">Berita</a></li>
                         <li><a wire:navigate href="/pengumuman">Pengumuman</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li><a href="/kontak">Kontak Kami </a></li>
             </ul>
         </nav>
