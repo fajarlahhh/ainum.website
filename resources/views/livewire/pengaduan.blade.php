@@ -40,7 +40,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="why-choose-us_inner">
+                            <div class="why-choose-us_inner p-5">
                                 <!-- Why Choose us content Start -->
                                 <div class="why-choose-us_content wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".1s"
                                     style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -68,7 +68,7 @@
                                                 <td>{{ $data?->no_hp }}</td>
                                             </tr>
                                             <tr>
-                                                <th>Jenis Pengaduan</th>
+                                                <th class="text-nowrap">Jenis Pengaduan</th>
                                                 <th>:</th>
                                                 <td>{{ $data?->jenisPengaduan?->nama }}</td>
                                             </tr>
@@ -93,7 +93,9 @@
                                             </span>
                                             <div class="check-content">
                                                 <h4 class="check-content_title">Validasi</h4>
-                                                <p class="check-content_text">Pengaduan anda telah divalidasi oleh admin</p>
+                                                <p class="check-content_text">Pengaduan anda telah divalidasi oleh admin<br>
+                                                    <small><small>{{ $data->validation_at->format('d F Y H:i:s') }}</small></small>
+                                                </p>
                                             </div>
                                         </li>
                                     @else
@@ -111,7 +113,7 @@
                                         </li>
                                     @endif
                                     @if ($data->jenisPengaduan?->spk)
-                                        @if ($data->registrasiPelayanan?->spkPelayanan)
+                                        @if ($data->registrasiPelayanan->spkPelayanan)
                                             <li class="why-choose-us_list__single wow fadeInUp" data-wow-duration="1.5s"
                                                 data-wow-delay=".3s"
                                                 style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
@@ -120,7 +122,9 @@
                                                 </span>
                                                 <div class="check-content">
                                                     <h4 class="check-content_title">Penugasan</h4>
-                                                    <p class="check-content_text">Penugasan sudah dilakukan oleh admin</p>
+                                                    <p class="check-content_text">Penugasan sudah dilakukan oleh admin<br>
+                                                        <small><small>{{ $data->registrasiPelayanan->spkPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
+                                                    </p>
                                                 </div>
                                             </li>
                                         @else
@@ -154,7 +158,9 @@
                                                 </span>
                                                 <div class="check-content">
                                                     <h4 class="check-content_title">Pengerjaan</h4>
-                                                    <p class="check-content_text">Pengaduan anda sendang dalam proses pengerjaan
+                                                    <p class="check-content_text">Pengaduan anda sendang dalam proses
+                                                        pengerjaan<br>
+                                                        <small><small>{{ $data->registrasiPelayanan->surveyPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
                                                     </p>
                                                 </div>
                                             </li>
@@ -184,7 +190,8 @@
                                             </span>
                                             <div class="check-content">
                                                 <h4 class="check-content_title">Penyelesaian</h4>
-                                                <p class="check-content_text">Pengaduan anda sudah selesai dikerjakan
+                                                <p class="check-content_text">Pengaduan anda sudah selesai dikerjakan<br>
+                                                    <small><small>{{ $data->registrasiPelayanan->beritaAcaraPelayanan->created_at->format('d F Y H:i:s') }}</small></small>
                                                 </p>
                                             </div>
                                         </li>
@@ -337,50 +344,51 @@
                     </form>
                 </div>
             </div>
-            @push('scripts')
-                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-                    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-                <script>
-                    var map = L.map('map').setView([{{ $latitude }}, {{ $longitude }}], {{ $zoom }});
-
-                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-                    var marker = L.marker([{{ $latitude }}, {{ $longitude }}], {
-                        draggable: 'true'
-                    }).addTo(map);
-
-                    marker.on('dragend', function(event) {
-                        var position = marker.getLatLng();
-                        marker.setLatLng(position, {
-                            draggable: 'true'
-                        }).bindPopup(position).update();
-
-                        Livewire.dispatch('koordinat', {
-                            long: position.lng,
-                            lat: position.lat
-                        })
-                    });
-
-                    $(".coordinate").change(function() {
-                        var lat = document.getElementById('latitude').value;
-                        var lng = document.getElementById('longitude').value;
-                        // Validasi nilai input
-                        if (!isNaN(lat) && !isNaN(lng) && lat !== '' && lng !== '') {
-                            var newLatLng = new L.LatLng(lat, lng);
-
-                            // Pindahkan marker ke lokasi baru
-                            marker.setLatLng(newLatLng);
-
-                            // Fokuskan peta ke lokasi baru
-                            map.setView(newLatLng, 13);
-                        } else {
-                            alert('Please enter valid latitude and longitude.');
-                        }
-                    });
-                </script>
-            @endpush
         @break
 
     @endswitch
     <!-- Info Tagihan Section End -->
 </div>
+
+@push('scripts')
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([{{ $latitude }}, {{ $longitude }}], {{ $zoom }});
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        var marker = L.marker([{{ $latitude }}, {{ $longitude }}], {
+            draggable: 'true'
+        }).addTo(map);
+
+        marker.on('dragend', function(event) {
+            var position = marker.getLatLng();
+            marker.setLatLng(position, {
+                draggable: 'true'
+            }).bindPopup(position).update();
+
+            Livewire.dispatch('koordinat', {
+                long: position.lng,
+                lat: position.lat
+            })
+        });
+
+        $(".coordinate").change(function() {
+            var lat = document.getElementById('latitude').value;
+            var lng = document.getElementById('longitude').value;
+            // Validasi nilai input
+            if (!isNaN(lat) && !isNaN(lng) && lat !== '' && lng !== '') {
+                var newLatLng = new L.LatLng(lat, lng);
+
+                // Pindahkan marker ke lokasi baru
+                marker.setLatLng(newLatLng);
+
+                // Fokuskan peta ke lokasi baru
+                map.setView(newLatLng, 13);
+            } else {
+                alert('Please enter valid latitude and longitude.');
+            }
+        });
+    </script>
+@endpush

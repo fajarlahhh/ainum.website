@@ -11,6 +11,9 @@ class RegistrasiPelayananOnline extends Model
 {
     protected $table = 'pelayanan.registrasi_pelayanan_online';
 
+    protected $casts = [
+        'validation_at' => 'datetime',
+    ];
 
     protected $guarded = [];
 
@@ -27,5 +30,10 @@ class RegistrasiPelayananOnline extends Model
     public function jenisPengaduan(): BelongsTo
     {
         return $this->belongsTo(JenisPengaduan::class);
+    }
+
+    public function registrasiPelayanan(): HasOne
+    {
+        return $this->hasOne(RegistrasiPelayanan::class);
     }
 }
