@@ -48,6 +48,11 @@
                                     <div class="heading-one">
                                         <table class="table text-white">
                                             <tr>
+                                                <th>Nomor</th>
+                                                <th>:</th>
+                                                <td>{{ $data?->nomor }}</td>
+                                            </tr>
+                                            <tr>
                                                 <th>Nama</th>
                                                 <th>:</th>
                                                 <td>{{ $data?->nama }}</td>
