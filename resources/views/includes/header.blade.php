@@ -24,7 +24,7 @@
                                             <li class="has-children">
                                                 <a wire:navigate href="/">Home</a>
                                             </li>
-                                            <li class="has-children">
+                                            {{-- <li class="has-children">
                                                 <a href="#">Tentang Kami</a>
                                                 <ul class="sub-menu">
                                                     <li>
@@ -38,15 +38,16 @@
                                                             Organisasi</a>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                             <li class="has-children">
                                                 <a href="#">Pelayanan</a>
                                                 <ul class="sub-menu">
                                                     <li><a wire:navigate href="/infotagihan">Info Tagihan</a>
                                                     </li>
-                                                    <li><a wire:navigate href="/laporangka">Lapor Angka</a>
-                                                    </li>
-                                                    <li><a wire:navigate href="/pasangbaru">Pasang Baru</a>
+                                                    {{-- <li><a wire:navigate href="/laporangka">Lapor Angka</a>
+                                                    </li> --}}
+                                                    {{-- <li><a wire:navigate href="/pasangbaru">Pasang Baru</a>
+                                                    </li> --}}
                                                     </li>
                                                     <li><a wire:navigate href="/pengaduan">Pengaduan</a></li>
                                                 </ul>
