@@ -111,7 +111,7 @@
                 <li class="menu-item-has-children">
                     <a wire:navigate href="/">Home</a>
                 </li>
-                <li class="menu-item-has-children">
+                {{-- <li class="menu-item-has-children">
                     <a href="#">Tentang Kami</a>
                     <ul class="dropdown">
                         <li>
@@ -124,13 +124,13 @@
                             <a wire:navigate href="/strukturorganisasi">Struktur Organisasi</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="menu-item-has-children">
                     <a href="">Pelayanan</a>
                     <ul class="dropdown">
                         <li><a href="/infotagihan">Info Tagihan</a></li>
-                        <li><a href="/laporangka">Lapor Angka</a></li>
-                        <li><a href="/pasangbaru">Pasang Baru</a></li>
+                        {{-- <li><a href="/laporangka">Lapor Angka</a></li> --}}
+                        {{-- <li><a href="/pasangbaru">Pasang Baru</a></li> --}}
                         <li><a href="/pengaduan">Pengaduan</a></li>
                     </ul>
                 </li>

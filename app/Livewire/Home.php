@@ -13,7 +13,7 @@ class Home extends Component
         return view(
             'livewire.home',
             [
-                'publikasi' => Publikasi::orderBy('created_at', 'desc')->limit(6)->get(),
+                // 'publikasi' => Publikasi::orderBy('created_at', 'desc')->limit(6)->get(),
                 'mitra' => Mitra::all()
             ]
         );

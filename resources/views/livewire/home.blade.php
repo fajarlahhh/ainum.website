@@ -168,7 +168,7 @@
     </div>
 
     <!-- Blog Post Section Starrt -->
-    <div class="blog-post section-padding pt-1">
+    {{-- <div class="blog-post section-padding pt-1">
         <div class="container">
             <div class="row">
                 <div class="blog-post-top mb-1">
@@ -299,7 +299,7 @@
         <div class="shape shape-6">
             <img src="assets/images/shape/shape-18.png" alt="Shape">
         </div>
-    </div>
+    </div> --}}
     <!-- Blog Post Section End -->
 
     <div class="testimonial-one mb-5">
